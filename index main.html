@@ -33,15 +33,15 @@ body{font-family:var(--f);background:#bfbab3;min-height:100vh;display:flex;justi
 .bu.sy::before{display:none}
 .sl{font-size:10.5px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.06em;padding:2px 0}
 .mg{display:grid;grid-template-columns:1fr 1fr;gap:7px}
-.mi{  
+.mi{
   background:#fff;
   border:1px solid #e2e8f0;
   border-radius:var(--r);padding:9px 13px;
   cursor:pointer;
   display:flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
+  align-items:center;
+  text-align:center;
+  justify-content:center;
   transition:all .12s;
   font-size:13px;
   color:#111;
@@ -62,7 +62,7 @@ body{font-family:var(--f);background:#bfbab3;min-height:100vh;display:flex;justi
 .cd{background:#fff;border:1px solid #e2e8f0;border-radius:var(--r);padding:11px 13px}
 .cd .ci{font-size:11px;font-weight:700;color:#64748b;margin-bottom:5px;text-transform:uppercase;letter-spacing:.04em}
 .cd .cb{font-size:13px;color:#111;line-height:1.6;white-space:pre-line}
-.cd .cb a{color:var(--bl);word-break:break-all;font-size:12.5px}
+.cd .cb a,.cd>a{color:var(--bl);word-break:break-all;font-size:12.5px}
 .cd.ag{border-color:#86efac;background:#f0fdf4}.cd.ag .ci{color:#15803d}
 .cd.wa{border-color:#fcd34d;background:#fffbeb}.cd.wa .ci{color:#b45309}
 .cd.it{border-color:#bfdbfe;background:#eff6ff}.cd.it .ci{color:#1d4ed8}
@@ -115,64 +115,47 @@ Por gentileza, informe seu nome e CPF.
     <div class="mi bk full" onclick="go('inicio')">&#8617; Voltar ao menu principal</div>
   </div>
 </div>
-<!--  -->
+
+<!-- TORNE-SE UM CORRETOR -->
 <div class="sc" id="s-torne-se-um-corretor">
   <div class="bu">Selecione um assunto:</div>
   <div class="sb">
     <div class="si" onclick="go('com-crede')">Consulta de Instituições Credenciadas <span class="ar">&#8250;</span></div>
     <div class="si" onclick="go('sit')">Inscrição <span class="ar">&#8250;</span></div>
     <div class="si" onclick="go('satee')">Fale com um Atendente <span class="ar">&#8250;</span></div>
-    <div class="si bk" onclick="go('inicio')">&#8617; Voltar ao menu principal <span class="mg">&#8250;</span></div>
+    <div class="si bk" onclick="go('inicio')">&#8617; Voltar ao menu principal <span class="ar">&#8250;</span></div>
   </div>
 </div>
 
-<!-- Inscrição -->
+<!-- Inscrição (Torne-se um corretor) -->
 <div class="sc" id="s-sit">
   <div class="bu">Selecione o tipo de <b>Inscrição</b>:</div>
   <div class="sb">
-    <div class="si" onclick="go('si-pf')">Pessoa Física <span class="ar">&#8250;</span></div>
-    <div class="si" onclick="go('si-pj')">Pessoa Jurídica <span class="ar">&#8250;</span></div>
-    <div class="si" onclick="go('si-es')">Estágio <span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('tsi-pf')">Pessoa Física <span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('tsi-pj')">Pessoa Jurídica <span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('tsi-es')">Estágio <span class="ar">&#8250;</span></div>
     <div class="si bk" onclick="go('torne-se-um-corretor')">&#8617; Voltar <span class="ar">&#8250;</span></div>
   </div>
 </div>
-<div class="sc" id="s-si-pf">
+<div class="sc" id="s-tsi-pf">
   <div class="cd"><div class="ci">Inscrição — Pessoa Física</div><div class="cb">Acesse o Site do Creci-PR e confira a documentação necessária para realizar sua inscrição.<br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/119-inscricao-pessoa-fisica" target="_blank">crecipr.gov.br — Inscrição Pessoa Física</a></div></div>
-  <div class="cd ag"><div class="ci"></div><div class="cb">As solicitações devem ser feitas presencialmente na sede, na regional do Creci mais próxima ou no <strong>Atendimento Online</strong></div></div>
-    <div class="cd"><div class="ci">Acesse a Área Profissional:</div>
-  <a href="https://www.creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2" target="_blank">Atendimento Online</a>
-  <div class="cb">Login: CPF
-Senha inicial: 6 primeiros dígitos do CPF.
-Se a senha não funcionar, selecione “PRIMEIRO ACESSO”.
-</div></div>
-
-
-
-  <div class="sb"><div class="si bk" onclick="go('sit')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
-  
-</div>
-<div class="sc" id="s-si-pj">
-  <div class="cd"><div class="ci">Inscrição — Pessoa Jurídica</div><div class="cb">Acesse o site do Creci-PR e confira a documentação necessária para realizar sua inscrição.<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/120-inscricao-pessoa-juridica" target="_blank">crecipr.gov.br — Inscrição Pessoa Jurídica</a></div></div>
-  <div class="cd ag"><div class="ci"></div><div class="cb">As solicitações devem ser feitas presencialmente na sede, na regional do Creci mais próxima ou no <strong>Atendimento Online</strong></div></div>
-  <div class="cd"><div class="ci"><div class="ci">Acesse a Área Profissional:</div>
-  <a href="https://creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2">Atendimento Online</a></div>
-  <div class="cb">Login: CNPJ
-Senha inicial: 6 primeiros dígitos do CNPJ.
-Se a senha não funcionar, selecione “PRIMEIRO ACESSO”</div></div>
-  <div class="sb"><div class="si bk" onclick="go('sit')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
-</div>
-<div class="sc" id="s-si-es">
-  <div class="cd"><div class="ci">Inscrição — Estágio</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou em uma das Regionais do CRECI-PR ou no Atendimento Online.<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/1045-estagiarios" target="_blank">crecipr.gov.br — Estagiários</a></div></div>
-  <div class="cd ag"><div class="ci"></div><div class="cb">As solicitações devem ser feitas presencialmente na sede, na regional do Creci mais próxima ou no <strong>Atendimento Online</strong></div></div>
+  <div class="cd ag"><div class="ci"></div><div class="cb">As solicitações devem ser feitas presencialmente na sede, na regional do Creci mais próxima ou no <b>ATENDIMENTO ONLINE</b>.</div></div>
   <div class="cd"><div class="ci">Acesse a Área Profissional:</div>
-  <a href="https://creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2" target="_blank">Atendimento Online</a>
-  <div class="cb">Login: CPF
+    <a href="https://www.creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2" target="_blank">Atendimento Online</a>
+    <div class="cb">Login: CPF
 Senha inicial: 6 primeiros dígitos do CPF.
-Se a senha não funcionar, selecione “PRIMEIRO ACESSO”.
-</div></div>
+Se a senha não funcionar, selecione “PRIMEIRO ACESSO”.</div></div>
   <div class="sb"><div class="si bk" onclick="go('sit')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
-
+<div class="sc" id="s-tsi-pj">
+  <div class="cd"><div class="ci">Inscrição — Pessoa Jurídica</div><div class="cb">Acesse o site do Creci-PR e confira a documentação necessária para realizar sua inscrição.<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/120-inscricao-pessoa-juridica" target="_blank">crecipr.gov.br — Inscrição Pessoa Jurídica</a></div></div>
+  <div class="cd ag"><div class="ci">Atendimento online em manutenção</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou na regional do Creci mais próxima.</div></div>
+  <div class="sb"><div class="si bk" onclick="go('sit')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
+</div>
+<div class="sc" id="s-tsi-es">
+  <div class="cd"><div class="ci">Inscrição — Estágio</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou na regional do Creci mais próxima.<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/1045-estagiarios" target="_blank">crecipr.gov.br — Estagiários</a></div></div>
+  <div class="sb"><div class="si bk" onclick="go('sit')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
+</div>
 
 <div class="sc" id="s-com-crede">
   <div class="cd"><div class="ci">Instituições Credenciadas</div><div class="cb">O Creci-PR disponibiliza por ordem alfabética a relação das Escolas que ministram os cursos de Técnico em Transações Imobiliárias (TTI) e Gestor em Negócios Imobiliários, que têm PORTARIAS do Conselho Federal (COFECI) ou são Escolas públicas, cuja divulgação visa apenas facilitar a consulta dos prováveis interessados.
@@ -183,9 +166,7 @@ Entretanto, esclarece que não tem o menor ou mais leve vínculo com essas insti
   <div class="sb"><div class="si bk" onclick="go('torne-se-um-corretor')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
 
-
-
-<!-- Atendente Secretaria -->
+<!-- Atendente (Torne-se um corretor) -->
 <div class="sc" id="s-satee">
   <div class="cd ag"><div class="ci">Atendimento Humano — Secretaria</div><div class="cb">Por gentileza, informe seu nome completo e CPF.
 
@@ -207,13 +188,13 @@ Aguarde um instante, em breve você será atendido.</div></div>
     <div class="si" onclick="go('sic')">Isenção — Idade / Tempo de Contribuição <span class="ar">&#8250;</span></div>
     <div class="si" onclick="go('scnai')">CNAI <span class="ar">&#8250;</span></div>
     <div class="si" onclick="go('scertidao')">Certidão <span class="ar">&#8250;</span></div>
-     <div class="si" onclick="go('scredencial')">Credencial <span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('scredencial')">Credencial <span class="ar">&#8250;</span></div>
     <div class="si hu" onclick="go('sate')">Atendente <span class="ar">&#8250;</span></div>
     <div class="si bk" onclick="go('sede')">&#8617; Voltar ao menu principal <span class="ar">&#8250;</span></div>
   </div>
 </div>
 
-<!-- Inscrição -->
+<!-- Inscrição (Secretaria) -->
 <div class="sc" id="s-si">
   <div class="bu">Selecione o tipo de <b>Inscrição</b>:</div>
   <div class="sb">
@@ -248,7 +229,7 @@ Aguarde um instante, em breve você será atendido.</div></div>
   </div>
 </div>
 <div class="sc" id="s-sc-pf">
-  <div class="cd"><div class="ci">Cancelamento — Pessoa Física</div><div class="cb">Acesse nosso site e confira a documentação necessária para realizar o Cancelamento de Inscrição – Pessoa Física.<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/119-inscricao-pessoa-fisica" target="_blank">crecipr.gov.br — Cancelamento Pessoa Física</a></div></div>
+  <div class="cd"><div class="ci">Cancelamento — Pessoa Física</div><div class="cb">Acesse nosso site e confira a documentação necessária para realizar o Cancelamento de Inscrição – Pessoa Física.<br><br><a href=" https://www.crecipr.gov.br/torne-se-um-corretor/119-inscricao-pessoa-fisica" target="_blank">crecipr.gov.br — Cancelamento Pessoa Física</a></div></div>
   <div class="cd ag"><div class="ci"></div><div class="cb">As solicitações devem ser feitas presencialmente na sede, na regional do Creci mais próxima ou no <strong>Atendimento Online</strong></div></div>
   <div class="cd"><div class="ci">Acesse a Área Profissional:</div>
   <a href="https://creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2" target="_blank">Atendimento Online</a>
@@ -259,25 +240,14 @@ Se a senha não funcionar, selecione “PRIMEIRO ACESSO”.
   <div class="sb"><div class="si bk" onclick="go('sc')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
 <div class="sc" id="s-sc-pj">
-  <div class="cd"><div class="ci">Cancelamento — Pessoa Jurídica</div><div class="cb">Acesse nosso site e confira a documentação necessária para realizar o Cancelamento de Inscrição – Pessoa Jurídica.<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/1049-cancelamento-de-inscricao-pessoa-juridica" target="_blank">crecipr.gov.br — Cancelamento Pessoa Jurídica</a></div></div>
-  <div class="cd ag"><div class="ci"></div><div class="cb">As solicitações devem ser feitas presencialmente na sede, na regional do Creci mais próxima ou no <strong>Atendimento Online</strong></div></div>
-  <div class="cd"><div class="ci">Acesse a Área Profissional:</div>
-  <a href="https://creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2" target="_blank">Atendimento Online</a>
-  <div class="cb">Login: CPF
-Senha inicial: 6 primeiros dígitos do CPF.
-Se a senha não funcionar, selecione “PRIMEIRO ACESSO”.
-</div></div>
+  <div class="cd"><div class="ci">Cancelamento — Pessoa Jurídica</div><div class="cb">Acesse o site do Creci-PR e confira a documentação necessária para realizar o cancelamento.<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/1049-cancelamento-de-inscricao-pessoa-juridica" target="_blank">crecipr.gov.br — Cancelamento Pessoa Jurídica</a></div></div>
+  <div class="cd ag"><div class="ci">Atendimento online em manutenção</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou na regional do Creci mais próxima.</div></div>
   <div class="sb"><div class="si bk" onclick="go('sc')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
 
 <!-- Reinscrição -->
 <div class="sc" id="s-sr">
-  <div class="cd"><div class="ci">Reinscrição</div><div class="cb">Acesse nosso site e confira a documentação necessária para realizar sua Reinscrição.<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/124-reinscricao-no-conselho-regionall" target="_blank">crecipr.gov.br — Reinscrição</a></div></div>
-  <div class="cd ag"><div class="ci"></div><div class="cb">As solicitações devem ser feitas presencialmente na sede, na regional do Creci mais próxima ou no <strong>Atendimento Online</strong></div></div>
-  <div class="cd"><div class="ci"><a href="https://creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2">Acesse o Atendimento Online</a></div><div class="cb">Login: CPF
-Senha inicial: 6 primeiros dígitos do CPF.
-Se a senha não funcionar, selecione “PRIMEIRO ACESSO”.
-</div></div>
+  <div class="cd"><div class="ci">Reinscrição</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou na regional do Creci mais próxima.<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/124-reinscricao-no-conselho-regionall" target="_blank">crecipr.gov.br — Reinscrição</a></div></div>
   <div class="sb"><div class="si bk" onclick="go('secretaria')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
 
@@ -292,22 +262,12 @@ Se a senha não funcionar, selecione “PRIMEIRO ACESSO”.
 </div>
 <div class="sc" id="s-st-e">
   <div class="cd"><div class="ci">Transferência — Entrada</div><div class="cb">Acesse o site do Creci-PR e confira a documentação necessária.<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/122-transferencia-de-inscricao" target="_blank">crecipr.gov.br — Transferência Entrada</a></div></div>
-  <div class="cd ag"><div class="ci">Atendimento online em manutenção</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou em uma das Regionais do CRECI-PR ou no Atendimento Online.</div></div>
-  <div class="cd"><div class="ci"><div class="ci">Acesse a Área Profissional:</div>
-  <a href="https://creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2">Atendimento Online</a></div>
-  <div class="cb">Login: CNPJ
-Senha inicial: 6 primeiros dígitos do CNPJ.
-Se a senha não funcionar, selecione “PRIMEIRO ACESSO”</div></div>
+  <div class="cd ag"><div class="ci">Atendimento online em manutenção</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou na regional do Creci mais próxima.</div></div>
   <div class="sb"><div class="si bk" onclick="go('st')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
 <div class="sc" id="s-st-s">
   <div class="cd"><div class="ci">Transferência — Saída</div><div class="cb">Acesse o site do Creci-PR e confira a documentação necessária.<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/1048-transferencia-de-inscricao-saida" target="_blank">crecipr.gov.br — Transferência Saída</a></div></div>
-  <div class="cd ag"><div class="ci">Atendimento online em manutenção</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou em uma das Regionais do CRECI-PR ou no Atendimento Online.</div></div>
-  <div class="cd"><div class="ci"><div class="ci">Acesse a Área Profissional:</div>
-  <a href="https://creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2">Atendimento Online</a></div>
-  <div class="cb">Login: CNPJ
-Senha inicial: 6 primeiros dígitos do CNPJ.
-Se a senha não funcionar, selecione “PRIMEIRO ACESSO”</div></div>
+  <div class="cd ag"><div class="ci">Atendimento online em manutenção</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou na regional do Creci mais próxima.</div></div>
   <div class="sb"><div class="si bk" onclick="go('st')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
 
@@ -322,50 +282,43 @@ Se a senha não funcionar, selecione “PRIMEIRO ACESSO”</div></div>
 </div>
 <div class="sc" id="s-ss-e">
   <div class="cd"><div class="ci">Secundária — Entrada (Paraná)</div><div class="cb">Acesse o site do Creci-PR e confira a documentação necessária.<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/1046-inscricao-secundaria-entrada-parana" target="_blank">crecipr.gov.br — Secundária Entrada PR</a></div></div>
-  <div class="cd ag"><div class="ci">Atendimento online em manutenção</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou em uma das Regionais do CRECI-PR ou no Atendimento Online.</div></div>
-  <div class="cd"><div class="ci"><div class="ci">Acesse a Área Profissional:</div>
-  <a href="https://creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2">Atendimento Online</a></div>
-  <div class="cb">Login: CNPJ
-Senha inicial: 6 primeiros dígitos do CNPJ.
-Se a senha não funcionar, selecione “PRIMEIRO ACESSO”</div></div>
+  <div class="cd ag"><div class="ci">Atendimento online em manutenção</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou na regional do Creci mais próxima.</div></div>
   <div class="sb"><div class="si bk" onclick="go('ss')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
 <div class="sc" id="s-ss-s">
   <div class="cd"><div class="ci">Secundária — Saída</div><div class="cb">Acesse o site do Creci-PR e confira a documentação necessária.<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/1047-inscricao-secundaria-saida" target="_blank">crecipr.gov.br — Secundária Saída</a></div></div>
-  <div class="cd ag"><div class="ci">Atendimento online em manutenção</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou em uma das Regionais do CRECI-PR ou no Atendimento Online.</div></div>
-  <div class="cd"><div class="ci"><div class="ci">Acesse a Área Profissional:</div>
-  <a href="https://creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2">Atendimento Online</a></div>
-  <div class="cb">Login: CNPJ
-Senha inicial: 6 primeiros dígitos do CNPJ.
-Se a senha não funcionar, selecione “PRIMEIRO ACESSO”</div></div>
+  <div class="cd ag"><div class="ci">Atendimento online em manutenção</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou na regional do Creci mais próxima.</div></div>
   <div class="sb"><div class="si bk" onclick="go('ss')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
 
 <!-- Exercício Eventual -->
 <div class="sc" id="s-se">
   <div class="cd"><div class="ci">Exercício Eventual</div><div class="cb">Acesse o site do Creci-PR e confira a documentação necessária.<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/121-exercicio-eventual" target="_blank">crecipr.gov.br — Exercício Eventual</a></div></div>
-  <div class="cd ag"><div class="ci">Atendimento online em manutenção</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou em uma das Regionais do CRECI-PR ou no Atendimento Online.</div></div>
-  <div class="cd"><div class="ci"><div class="ci">Acesse a Área Profissional:</div>
-  <a href="https://creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2">Atendimento Online</a></div>
-  <div class="cb">Login: CNPJ
-Senha inicial: 6 primeiros dígitos do CNPJ.
-Se a senha não funcionar, selecione “PRIMEIRO ACESSO”</div></div>
-  <div class="sb"><div class="si bk" onclick="go('secretaria')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
-</div>
-
-<!-- Isenção Maternidade -->
-<div class="sc" id="s-sim">
-  <div class="cd"><div class="ci">Isenção — Licença Maternidade</div><div class="cb">Acesse nosso site e confira a documentação necessária para solicitar a isenção de anuidade por licença-maternidade.
-<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/1530-isencao-de-anuidade-por-licenca-maternidade" target="_blank">crecipr.gov.br — Isenção Licença Maternidade</a></div></div>
-  <div class="cd ag"><div class="ci">Atendimento online em manutenção</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou em uma das Regionais do CRECI-PR ou no Atendimento Online.</div></div>
-  <
-  <div class="sb"><div class="si bk" onclick="go('secretaria')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
-</div>
-
-<!-- Isenção Idade -->
-<div class="sc" id="s-sic">
-  <div class="cd"><div class="ci">Isenção — Idade e Tempo de Contribuição</div><div class="cb">Acesse o site do Creci-PR e confira a documentação necessária.<br><br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/126-faculdade-do-pagamento-de-anuidades" target="_blank">crecipr.gov.br — Isenção Anuidade</a></div></div>
   <div class="cd ag"><div class="ci">Atendimento online em manutenção</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou na regional do Creci mais próxima.</div></div>
+  <div class="sb"><div class="si bk" onclick="go('secretaria')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
+</div>
+
+<!-- Isenção — Licença Maternidade (ALTERADO) -->
+<div class="sc" id="s-sim">
+  <div class="cd"><div class="ci">Isenção — Licença Maternidade</div><div class="cb">Acesse o site do Creci-PR e confira a documentação necessária para solicitar a isenção de anuidade por licença-maternidade.<br><br>Consulte as informações e os documentos necessários:<br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/1530-isencao-de-anuidade-por-licenca-maternidade" target="_blank">crecipr.gov.br — Isenção Licença Maternidade</a></div></div>
+  <div class="cd ag"><div class="ci">Atendimento</div><div class="cb">O atendimento pode ser realizado presencialmente na Sede ou em uma das Regionais do CRECI-PR ou no <b>ATENDIMENTO ONLINE</b>.</div></div>
+  <div class="cd"><div class="ci">Acesse a Área Profissional:</div>
+    <a href="https://creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2" target="_blank">Atendimento Online</a>
+    <div class="cb">Login: CPF
+Senha inicial: 6 primeiros dígitos do CPF.
+Se a senha não funcionar, selecione “PRIMEIRO ACESSO”.</div></div>
+  <div class="sb"><div class="si bk" onclick="go('secretaria')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
+</div>
+
+<!-- Isenção — Idade e Tempo de Contribuição (ALTERADO) -->
+<div class="sc" id="s-sic">
+  <div class="cd"><div class="ci">Isenção — Idade e Tempo de Contribuição</div><div class="cb">Acesse o site do Creci-PR e confira a documentação necessária para solicitar a isenção de anuidade por idade e tempo de contribuição.<br><br>Consulte as informações e os documentos necessários:<br><a href="https://www.crecipr.gov.br/torne-se-um-corretor/126-faculdade-do-pagamento-de-anuidades" target="_blank">crecipr.gov.br — Isenção Anuidade</a></div></div>
+  <div class="cd ag"><div class="ci">Atendimento</div><div class="cb">O atendimento pode ser realizado presencialmente na Sede ou em uma das Regionais do CRECI-PR ou no <b>ATENDIMENTO ONLINE</b>.</div></div>
+  <div class="cd"><div class="ci">Acesse a Área Profissional:</div>
+    <a href="https://creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2" target="_blank">Atendimento Online</a>
+    <div class="cb">Login: CPF
+Senha inicial: 6 primeiros dígitos do CPF.
+Se a senha não funcionar, selecione “PRIMEIRO ACESSO”.</div></div>
   <div class="sb"><div class="si bk" onclick="go('secretaria')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
 
@@ -374,15 +327,21 @@ Se a senha não funcionar, selecione “PRIMEIRO ACESSO”</div></div>
   <div class="bu">Selecione o assunto em <b>CNAI</b>:</div>
   <div class="sb">
     <div class="si" onclick="go('cn-i')">Inscrição CNAI <span class="ar">&#8250;</span></div>
-    <div class="si" onclick="go('cn-p')">Parecer Técnico de Avaliação Imobiliária  (PTAM) <span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('cn-p')">Parecer Técnico de Avaliação Imobiliária (PTAM) <span class="ar">&#8250;</span></div>
     <div class="si" onclick="go('cn-s')">Selo <span class="ar">&#8250;</span></div>
     <div class="si" onclick="go('cn-m')">Manual — Honorários sobre Avaliação Imobiliária <span class="ar">&#8250;</span></div>
     <div class="si bk" onclick="go('secretaria')">&#8617; Voltar <span class="ar">&#8250;</span></div>
   </div>
 </div>
+<!-- Inscrição CNAI  -->
 <div class="sc" id="s-cn-i">
-  <div class="cd"><div class="ci">Inscrição CNAI</div><div class="cb">Acesse o site do Creci-PR e confira a documentação necessária.<br><br><a href="https://crecipr.gov.br/index.php/cadastro-de-avaliadores" target="_blank">crecipr.gov.br — Cadastro de Avaliadores</a></div></div>
-  <div class="cd ag"><div class="ci">Atendimento online em manutenção Presencial</div><div class="cb">As solicitações devem ser feitas presencialmente na sede ou na regional do Creci mais próxima.</div></div>
+  <div class="cd"><div class="ci">Inscrição CNAI</div><div class="cb">Acesse o site do Creci-PR e confira a documentação necessária.<br>Cadastro Nacional de Avaliadores de Imóveis:<br><a href="https://crecipr.gov.br/index.php/cadastro-de-avaliadores" target="_blank">crecipr.gov.br — Cadastro de Avaliadores</a></div></div>
+  <div class="cd ag"><div class="ci">Atendimento</div><div class="cb">O atendimento pode ser realizado presencialmente na Sede ou em uma das Regionais do CRECI-PR ou no <b>ATENDIMENTO ONLINE</b>.</div></div>
+  <div class="cd"><div class="ci">Acesse a Área Profissional:</div>
+    <a href="https://www.creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2" target="_blank">Atendimento Online</a>
+    <div class="cb">Login: CPF
+Senha inicial: 6 primeiros dígitos do CPF.
+Se a senha não funcionar, selecione “PRIMEIRO ACESSO”.</div></div>
   <div class="sb"><div class="si bk" onclick="go('scnai')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
 <div class="sc" id="s-cn-p">
@@ -407,25 +366,18 @@ Se a senha não funcionar, selecione “PRIMEIRO ACESSO”</div></div>
 <!-- Credencial -->
 <div class="sc" id="s-scredencial">
   <div class="cd"><div class="ci">Ato Solene:</div>
-<div>Já é possível consultar o número de Registro e emitir a Certidão de Regularidade pelo site, informando somente o CPF:</div>
-<a href="https://www.creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2" target="_blank">Atendimento Online</a>
-  <div class="cb">
-</div></div><br>
+    <div>Já é possível consultar o número de Registro e emitir a Certidão de Regularidade pelo site, informando somente o CPF:</div>
+    <a href="https://www.creci6.sciretech.com.br/area_profissional/index.asp?codigo_cliente=2" target="_blank">Atendimento Online</a>
+  </div>
   <div class="cd"><div class="ci">Credencial Física</div>
-   <div class="cb">
-A credencial física será entregue após o Ato Solene, que ainda não possui data definida.
+    <div class="cb">A credencial física será entregue após o Ato Solene, que ainda não possui data definida.
 A previsão é que o ato ocorra, em média, entre 60 e 90 dias após a solicitação.
-Assim que a data for definida, os inscritos serão notificados por e-mail.
-</div></div>
-<div class="cd"><div class="ci">Credencial Digital</div>
-    <div class="cb">
-
-Após o deferimento da inscrição sua Credencial digital estará disponível no aplicativo EI-COLIBRI.
+Assim que a data for definida, os inscritos serão notificados por e-mail.</div></div>
+  <div class="cd"><div class="ci">Credencial Digital</div>
+    <div class="cb">Após o deferimento da inscrição sua Credencial digital estará disponível no aplicativo EI-COLIBRI.
 O acesso deve ser feito diretamente com o CPF, utilizando como senha:
 5 primeiros dígitos do CPF + 4 números do ANO de nascimento.
-Atenção: não é necessário realizar “PRIMEIRO ACESSO”. O login deve ser feito diretamente com o CPF.
-
-</div></div>
+Atenção: não é necessário realizar “PRIMEIRO ACESSO”. O login deve ser feito diretamente com o CPF.</div></div>
   <div class="sb"><div class="si bk" onclick="go('secretaria')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
 
@@ -450,9 +402,7 @@ Aguarde um instante, em breve você será atendido.</div></div>
     <div class="si bk" onclick="go('sede')">&#8617; Voltar ao menu principal <span class="ar">&#8250;</span></div>
   </div>
 </div>
-<div class="sc" id="s-fa"> 
-  
-  
+<div class="sc" id="s-fa">
   <div class="cd"><div class="ci">Anuidade 2026 — Pagamento à vista</div><div class="cb">Acesse o site do Creci-PR e emita o seu boleto.<br><br><a href="https://www.crecipr.gov.br/anuidade-2026" target="_blank">crecipr.gov.br/anuidade-2026</a></div></div>
   <div class="cd ag"><div class="ci">Opção 2 — Parcelamento da Anuidade 2026 (Atendimento Humano)</div><div class="cb">Clique aqui para o parcelamento da anuidade de 2026.<br><br>Por gentileza, informe seu nome e CPF.</div></div>
   <div class="sb"><div class="si bk" onclick="go('financeiro')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
@@ -481,20 +431,19 @@ Aguarde um instante, em breve você será atendido.</div></div>
 </div>
 
 <!-- 1.3 OUVIDORIA -->
- <div class="sc" id="s-ouvidoria">
+<div class="sc" id="s-ouvidoria">
   <div class="cd"><div class="ci">Ouvidoria</div><div class="cb">Por favor, descreva a sua solicitação.</div></div>
   <div class="cd it"><div class="ci">Formulário Online</div><div class="cb"><a href="https://creci6.sciretech.com.br/servicos/ouvidoria.asp?codigo_cliente=2" target="_blank">creci6.sciretech.com.br — Formulário Ouvidoria</a></div></div>
   <div class="sb">
-    <div class="si hu" onclick="go('ou-at')">Falar com um Atendente <span class="ar">›</span></div>
-    <div class="si bk" onclick="go('sede')">↩ Voltar ao menu principal <span class="ar">›</span></div>
+    <div class="si hu" onclick="go('ou-at')">Falar com um Atendente <span class="ar">&#8250;</span></div>
+    <div class="si bk" onclick="go('sede')">&#8617; Voltar ao menu principal <span class="ar">&#8250;</span></div>
   </div>
 </div>
-
 <div class="sc" id="s-ou-at">
   <div class="cd ag"><div class="ci">Atendimento Humano — Ouvidoria</div><div class="cb">Por gentileza, informe seu nome completo e CPF.
 
 Aguarde um instante, em breve você será atendido.</div></div>
-  <div class="sb"><div class="si bk" onclick="go('ouvidoria')">↩ Voltar <span class="ar">›</span></div></div>
+  <div class="sb"><div class="si bk" onclick="go('ouvidoria')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
 
 <!-- 1.4 FISCALIZAÇÃO -->
@@ -648,7 +597,7 @@ Aguarde um instante, em breve você será atendido.</div></div>
     <div class="si hu" onclick="go('com-at')">Marketing e Divulgação <span class="ar">&#8250;</span></div>
     <div class="si hu" onclick="go('com-at')">Cursos de Capacitação Profissional <span class="ar">&#8250;</span></div>
     <div class="si hu" onclick="go('com-at')">Informações sobre Eventos <span class="ar">&#8250;</span></div>
-    <div class="si" onclick="go('com-locacao')">Locação de Auditório e Espaços<span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('com-locacao')">Locação de Auditório e Espaços <span class="ar">&#8250;</span></div>
     <div class="si" onclick="go('com-sala')">Sala do Corretor — Reservas <span class="ar">&#8250;</span></div>
     <div class="si" onclick="go('com-portal')">Portal Creci Brasil <span class="ar">&#8250;</span></div>
     <div class="si" onclick="go('com-cred')">Consulta de Instituições Credenciadas <span class="ar">&#8250;</span></div>
@@ -662,7 +611,7 @@ Aguarde um instante, em breve você será atendido.</div></div>
   <div class="sb"><div class="si bk" onclick="go('comunicacao')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
 <div class="sc" id="s-com-locacao">
-  <div class="cd it"><div class="ci">Locação de Auditório e Espaços</div><div class="cb">Referente à locação de auditório e espaços do CRECI-PR para a realização de eventos, solicitamos que entre em contato pelo e-mail:<br><br><b><a href="diretoria@crecipr.gov.br"> diretoria@crecipr.gov.br</a></b></div></div>
+  <div class="cd it"><div class="ci">Locação de Auditório e Espaços</div><div class="cb">Referente à locação de auditório e espaços do CRECI-PR para a realização de eventos, solicitamos que entre em contato pelo e-mail:<br><br><b><a href="mailto:diretoria@crecipr.gov.br">diretoria@crecipr.gov.br</a></b></div></div>
   <div class="cd"><div class="ci">Dados do Evento</div><div class="cb">Na solicitação, informe:
 
 &#8226; Nome do evento:
@@ -682,7 +631,6 @@ Aguarde um instante, em breve você será atendido.</div></div>
   <div class="cd ag"><div class="ci">Informações adicionais</div><div class="cb">Informações adicionais e agendamento de visita ao espaço também devem ser solicitados pelo mesmo e-mail.<br><br>Com essas informações, a Diretoria poderá verificar a disponibilidade e dar o devido encaminhamento à solicitação.</div></div>
   <div class="sb"><div class="si bk" onclick="go('comunicacao')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
-
 <div class="sc" id="s-com-sala">
   <div class="cd it"><div class="ci">Sala do Corretor — Reservas</div><div class="cb">O Creci-PR dispõe de espaços para uso dos corretores no atendimento a clientes. O agendamento deve ser realizado com antecedência mínima de 24 horas.<br><br>Para reservar, envie os seguintes dados:<br><br>&#8226; Nome<br>&#8226; Número do Creci<br>&#8226; Data e horário desejados<br>&#8226; Quantidade de pessoas<br>&#8226; Objetivo da reunião</div></div>
   <div class="sb">
@@ -690,7 +638,6 @@ Aguarde um instante, em breve você será atendido.</div></div>
     <div class="si bk" onclick="go('comunicacao')">&#8617; Voltar <span class="ar">&#8250;</span></div>
   </div>
 </div>
-
 <div class="sc" id="s-com-portal">
   <div class="cd it"><div class="ci">Portal Creci Brasil</div><div class="cb">Para acessar <b>portalcreci.org.br</b>:
 
@@ -797,8 +744,8 @@ Com exceção dos cursos de Avaliação Imobiliária e Correspondente de Crédit
 <div class="sc" id="s-r-lon-fin">
   <div class="bu">Financeiro — <b>Londrina</b></div>
   <div class="sb">
-    <div class="si" onclick="go('fa')">Anuidade do Exercício<span class="ar">&#8250;</span></div>
-    <div class="si" onclick="go('fat')">Negociar Débitos (Dívida Ativa)<span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('fa')">Anuidade do Exercício <span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('fat')">Negociar Débitos (Dívida Ativa) <span class="ar">&#8250;</span></div>
     <div class="si bk" onclick="go('r-lon')">&#8617; Voltar <span class="ar">&#8250;</span></div>
   </div>
 </div>
@@ -807,12 +754,13 @@ Com exceção dos cursos de Avaliação Imobiliária e Correspondente de Crédit
 Aguarde um instante, em breve você será atendido.</div></div>
   <div class="sb"><div class="si bk" onclick="go('r-lon')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
+
 <!-- Regional Maringá -->
 <div class="sc" id="s-r-mar">
   <div class="bu">Você está em contato com a Regional de <b>Maringá</b> do CRECI-PR.</div>
   <div class="sb">
-    <div class="si" onclick="go('fat-mar')">Secretaria<span class="ar">&#8250;</span></div>
-    <div class="si" onclick="go('fat-mar')">Fiscalização<span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('fat-mar')">Secretaria <span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('fat-mar')">Fiscalização <span class="ar">&#8250;</span></div>
     <div class="si" onclick="go('r-mar-fin')">Financeiro <span class="ar">&#8250;</span></div>
     <div class="si hu" onclick="go('fat-mar')">Falar com um Atendente <span class="ar">&#8250;</span></div>
     <div class="si bk" onclick="go('regionais')">&#8617; Voltar <span class="ar">&#8250;</span></div>
@@ -821,8 +769,8 @@ Aguarde um instante, em breve você será atendido.</div></div>
 <div class="sc" id="s-r-mar-fin">
   <div class="bu">Financeiro — <b>Maringá</b></div>
   <div class="sb">
-    <div class="si" onclick="go('fa')">Anuidade do Exercício<span class="ar">&#8250;</span></div>
-    <div class="si" onclick="go('fat')">Negociar Débitos (Dívida Ativa)<span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('fa')">Anuidade do Exercício <span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('fat')">Negociar Débitos (Dívida Ativa) <span class="ar">&#8250;</span></div>
     <div class="si bk" onclick="go('r-mar')">&#8617; Voltar <span class="ar">&#8250;</span></div>
   </div>
 </div>
@@ -836,8 +784,8 @@ Aguarde um instante, em breve você será atendido.</div></div>
 <div class="sc" id="s-r-gen">
   <div class="bu" id="r-gen-title">Regional</div>
   <div class="sb">
-    <div class="si" onclick="go('fat-gen')">Secretaria<span class="ar">&#8250;</span></div>
-    <div class="si" onclick="go('fat-gen')">Fiscalização<span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('fat-gen')">Secretaria <span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('fat-gen')">Fiscalização <span class="ar">&#8250;</span></div>
     <div class="si" onclick="go('r-gen-fin')">Financeiro <span class="ar">&#8250;</span></div>
     <div class="si hu" onclick="go('fat-gen')">Falar com um Atendente <span class="ar">&#8250;</span></div>
     <div class="si bk" onclick="go('regionais')">&#8617; Voltar <span class="ar">&#8250;</span></div>
@@ -846,8 +794,8 @@ Aguarde um instante, em breve você será atendido.</div></div>
 <div class="sc" id="s-r-gen-fin">
   <div class="bu" id="r-gen-fin-title">Financeiro — Regional</div>
   <div class="sb">
-    <div class="si" onclick="go('fa')">Anuidade do Exercício<span class="ar">&#8250;</span></div>
-    <div class="si" onclick="go('fat')">Negociar Débitos (Dívida Ativa)<span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('fa')">Anuidade do Exercício <span class="ar">&#8250;</span></div>
+    <div class="si" onclick="go('fat')">Negociar Débitos (Dívida Ativa) <span class="ar">&#8250;</span></div>
     <div class="si bk" onclick="go('r-gen')">&#8617; Voltar <span class="ar">&#8250;</span></div>
   </div>
 </div>
@@ -857,7 +805,6 @@ Aguarde um instante, em breve você será atendido.</div></div>
   <div class="sb"><div class="si bk" onclick="go('r-gen')">&#8617; Voltar <span class="ar">&#8250;</span></div></div>
 </div>
 
-
 </div><!-- /chat -->
 <div class="ft">
   <div class="fi">Digite uma mensagem...</div>
@@ -865,23 +812,26 @@ Aguarde um instante, em breve você será atendido.</div></div>
 </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 var LBL = {
   'inicio':'Início','sede':'Sede','regionais':'Regionais',
+  'torne-se-um-corretor':'Torne-se um corretor','sit':'Inscrição','satee':'Atendente',
+  'tsi-pf':'Pessoa Física','tsi-pj':'Pessoa Jurídica','tsi-es':'Estágio',
   'secretaria':'Secretaria','financeiro':'Financeiro','ouvidoria':'Ouvidoria',
   'fiscalizacao':'Fiscalização','processos':'Proc. Disciplinar',
-  'appcolibri':'App Ei Colibrí','comunicacao':'Comunicação',
+  'appcolibri':'App Ei Colibri','comunicacao':'Comunicação',
   'cursosead':'Cursos EaD','outros':'Outros Assuntos',
   'si':'Inscrição','sc':'Cancelamento','sr':'Reinscrição',
   'st':'Transferências','ss':'Secundária','se':'Exercício Eventual',
   'sim':'Isenção Maternidade','sic':'Isenção Idade',
-  'scnai':'CNAI','scertidao':'Certidão','sate':'Atendente',
+  'scnai':'CNAI','scertidao':'Certidão','scredencial':'Credencial','sate':'Atendente',
   'si-pf':'Pessoa Física','si-pj':'Pessoa Jurídica','si-es':'Estágio',
   'sc-pf':'Pessoa Física','sc-pj':'Pessoa Jurídica',
   'st-e':'Entrada','st-s':'Saída','ss-e':'Entrada','ss-s':'Saída',
   'cn-i':'Inscrição CNAI','cn-p':'PTAM','cn-s':'Selo','cn-m':'Manual',
   'fa':'Anuidade','fb':'2ª Via Boleto','fd':'Dívida Ativa',
   'fr':'Recibo','fc':'Certidão','fat':'Atendente',
+  'ou-at':'Atendente',
   'fi-d':'Dúvidas','fi-den':'Denúncia','fi-rel':'Relatório','fi-at':'Atendente',
   'fi-an':'Anúncios e Publicidade','fi-co':'Contratos',
   'pd-den':'Denúncia','pd-def':'Defesa','pd-proc':'Processos','pd-at':'Atendente',
@@ -892,25 +842,21 @@ var LBL = {
   'pd-proc-cop':'Cópia de Processo','pd-proc-and':'Andamento Processual',
   'colibri-sup':'Suporte Técnico',
   'com-at':'Atendente','com-portal':'Portal Creci','com-portal-sup':'Suporte Técnico',
-  'com-cred':'Credenciadas','com-locacao':'Locação de Auditório','com-sala':'Sala do Corretor',
-  'r-lon':'Londrina','r-lon-fin':'Financeiro Londrina',
-  'r-mar':'Maringá','r-mar-fin':'Financeiro Maringá',
-  'r-gen':'Regional','r-gen-fin':'Financeiro Regional'};
+  'com-cred':'Credenciadas','com-crede':'Credenciadas','com-locacao':'Locação de Auditório','com-sala':'Sala do Corretor',
+  'r-lon':'Londrina','r-lon-fin':'Financeiro Londrina','fat-lon':'Atendente',
+  'r-mar':'Maringá','r-mar-fin':'Financeiro Maringá','fat-mar':'Atendente',
+  'r-gen':'Regional','r-gen-fin':'Financeiro Regional','fat-gen':'Atendente'};
+
+history._path = [];
 
 function bc(id) {
   var el = document.getElementById('bc');
   var parts = [];
-  
-
-  history._path = history._path || [];
-
   var index = history._path.indexOf(id);
-  
-  if (index !== -1) {
 
+  if (index !== -1) {
     history._path = history._path.slice(0, index + 1);
   } else {
-  
     history._path.push(id);
   }
 
@@ -918,14 +864,10 @@ function bc(id) {
 
   for (var i = 0; i < path.length; i++) {
     var k = path[i];
-    
-   
     if (LBL[k]) {
-  
       if (i === path.length - 1) {
         parts.push('<span class="cn">' + LBL[k] + '</span>');
-      } 
-      else {
+      } else {
         parts.push('<span onclick="go(\'' + k + '\')" style="cursor:pointer">' + LBL[k] + '</span>');
         parts.push('<span class="sp">›</span>');
       }
@@ -934,29 +876,25 @@ function bc(id) {
 
   el.innerHTML = parts.join(' ');
 }
-history._path=[];
 
 function go(id){
-  var cur=document.querySelector('.sc.on');
-  if(cur){ cur.classList.remove('on'); }
-  var next=document.getElementById('s-'+id);
-  if(next){
+  var cur = document.querySelector('.sc.on');
+  if (cur) { cur.classList.remove('on'); }
+  var next = document.getElementById('s-' + id);
+  if (next) {
     next.classList.add('on');
-    if(history._path[history._path.length-1]!==id){
-      history._path.push(id);
-    }
     bc(id);
-    var chat=document.getElementById('chat');
-    if(chat) chat.scrollTop=chat.scrollHeight;
+    var chat = document.getElementById('chat');
+    if (chat) chat.scrollTop = 0;
   }
 }
 
 function setRegional(nome){
-  var t=document.getElementById('r-gen-title');
-  var tf=document.getElementById('r-gen-fin-title');
+  var t  = document.getElementById('r-gen-title');
+  var tf = document.getElementById('r-gen-fin-title');
   var tr = document.getElementById('titulo-regional');
-  if(t) t.textContent='Você está em contato com a Regional de '+nome+' do CRECI-PR.';
-  if(tf) tf.textContent='Financeiro — '+nome;
+  if (t)  t.textContent  = 'Você está em contato com a Regional de ' + nome + ' do CRECI-PR.';
+  if (tf) tf.textContent = 'Financeiro — ' + nome;
   if (tr) tr.textContent = 'Atendimento Humano — ' + nome;
   go('r-gen');
 }
